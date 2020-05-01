@@ -1,16 +1,16 @@
 <html>
     <head>
         {% if title %}
-        <title>{{ title }} - microblog</title>
+        <title>{{ title }} - Flask login page</title>
         {% else %}
-        <title>microblog</title>
+        <title>Welcome to Flask</title>
         {% endif %}
     </head>
     <body>
         <div>
-            Microblog:
-            <a href="/index">Home</a>
-            <a href="/login">Login</a>
+            Breadcrumbs:
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('login') }}">Login</a>
         </div>
         <hr>
         {% with messages = get_flashed_messages() %}
